@@ -65,9 +65,7 @@ export default function Property() {
     {
       title: translate('Status'),
       dataIndex: 'status',
-      render: (status, record, index) => {
-        return status === 0 ? 'For Sale' : 'For Rent';
-      },
+      
     },
     {
       title: translate('Price'),

@@ -38,8 +38,15 @@ export default function Order() {
       title: translate('Items'),
       dataIndex: 'items',
       render: (items) => {
-        let itemsArr = items?.map(item => item?.item?.name);
+        let itemsArr = items?.map((item) => item?.item?.name);
         return itemsArr?.toString();
+      },
+    },
+    {
+      title: translate('User'),
+      dataIndex: 'userId',
+      render: (userId) => {
+        return userId?.username;
       },
     },
     {

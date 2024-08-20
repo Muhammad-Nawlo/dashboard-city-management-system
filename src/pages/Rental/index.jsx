@@ -8,14 +8,7 @@ export default function Rental() {
   const translate = useLanguage();
   const entity = '/real-estates/rentals';
   const searchConfig = {
-    displayLabels: [
-      'propertyId',
-      'tenantId',
-      'agentId',
-      'startDate',
-      'endDate',
-      'monthlyRent',
-    ],
+    displayLabels: ['propertyId', 'tenantId', 'agentId', 'startDate', 'endDate', 'monthlyRent'],
     searchFields: 'propertyId,tenantId,agentId,startDate,endDate,monthlyRent',
   };
   const deleteModalLabels = [
@@ -36,10 +29,17 @@ export default function Rental() {
 
   const dataTableColumns = [
     {
+      title: translate('User'),
+      dataIndex: 'tenant',
+      render: (tenant) => {
+        return tenant?.username;
+      },
+    },
+    {
       title: translate('Agent'),
-      dataIndex: 'agentId',
+      dataIndex: 'agent',
       render: (agent) => {
-        return agent?.fullName;
+        return agent?.username;
       },
     },
     {
@@ -60,7 +60,6 @@ export default function Rental() {
       title: translate('Monthly Rent'),
       dataIndex: 'monthlyRent',
     },
-
   ];
   const readColumns = [
     {

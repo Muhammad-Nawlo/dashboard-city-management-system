@@ -9,11 +9,11 @@ import {
 } from '@ant-design/icons';
 
 const AppNav = ({ translate }) => [
-  {
-    key: 'dashboard',
-    icon: <DashboardOutlined />,
-    label: <Link to={'/'}>{translate('dashboard')}</Link>,
-  },
+  // {
+  //   key: 'dashboard',
+  //   icon: <DashboardOutlined />,
+  //   label: <Link to={'/'}>{translate('dashboard')}</Link>,
+  // },
   {
     key: 'user',
     icon: <UserOutlined />,

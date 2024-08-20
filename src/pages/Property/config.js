@@ -4,6 +4,7 @@ export const fields = {
     required: true,
   },
   city: {
+    label: "Floor",
     type: 'string',
     required: true,
   },
@@ -12,6 +13,7 @@ export const fields = {
     required: true,
   },
   zipcode: {
+    label: 'Apartment number',
     type: 'string',
     required: true,
   },
@@ -22,9 +24,10 @@ export const fields = {
   status: {
     type: 'select',
     options: [
-      { value: 'Available', label: 'Available' },
       { value: 'Rented', label: 'Rented' },
       { value: 'Sold', label: 'Sold' },
+      { value: 'Sale', label: 'Sale' },
+      { value: 'Rent', label: 'Rent' },
     ],
     required: true,
   },
@@ -47,6 +50,7 @@ export const fields = {
     max: 10,
   },
   buildingArea: {
+    label: 'Building Number',
     type: 'number',
     required: true,
     min: 0,
@@ -80,6 +84,17 @@ export const fields = {
     searchFields: 'name',
     dataIndex: ['name'],
   },
+  // agent: {
+  //   type: 'search',
+  //   label: 'Agent',
+  //   entity: 'real-estates/agents',
+  //   redirectLabel: 'Add New Agent',
+  //   withRedirect: true,
+  //   urlToRedirect: '/agent',
+  //   displayLabels: ['fullName'],
+  //   searchFields: 'fullName',
+  //   dataIndex: ['fullName'],
+  // },
   files: {
     type: 'files',
     required: true,

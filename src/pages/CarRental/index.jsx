@@ -8,22 +8,10 @@ export default function Rental() {
   const translate = useLanguage();
   const entity = '/cars/rentals';
   const searchConfig = {
-    displayLabels: [
-      'carId',
-      'startDate',
-      'endDate',
-      'location',
-      'totalPrice',
-    ],
+    displayLabels: ['carId', 'startDate', 'endDate', 'location', 'totalPrice'],
     searchFields: 'location,totalPrice',
   };
-  const deleteModalLabels = [
-    'carId',
-    'startDate',
-    'endDate',
-    'location',
-    'totalPrice',
-  ];
+  const deleteModalLabels = ['carId', 'startDate', 'endDate', 'location', 'totalPrice'];
 
   const Labels = {
     PANEL_TITLE: translate('car_rental'),
@@ -33,6 +21,20 @@ export default function Rental() {
   };
 
   const dataTableColumns = [
+    {
+      title: translate('User'),
+      dataIndex: 'user',
+      render: (user) => {
+        return user?.username;
+      },
+    },
+    {
+      title: translate('Car'),
+      dataIndex: 'carId',
+      render: (carId) => {
+        return `${carId?.make} / ${carId?.model} / ${carId?.type?.name}`;
+      },
+    },
     {
       title: translate('Location'),
       dataIndex: 'location',
@@ -55,6 +57,10 @@ export default function Rental() {
         return new Date(endDate).toDateString();
       },
     },
+    {
+      title: translate('Status'),
+      dataIndex: 'status',
+    },
   ];
   const readColumns = [
     {
@@ -73,7 +79,6 @@ export default function Rental() {
       title: translate('End Date'),
       dataIndex: 'endDate',
     },
-
   ];
   const configPage = {
     entity,

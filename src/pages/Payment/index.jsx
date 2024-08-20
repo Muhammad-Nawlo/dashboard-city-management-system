@@ -28,6 +28,20 @@ export default function Rental() {
 
   const dataTableColumns = [
     {
+      title: translate('User'),
+      dataIndex: 'tenant',
+      render: (tenant) => {
+        return tenant?.username
+      },
+    },
+    {
+      title: translate('Agent'),
+      dataIndex: 'rentalId',
+      render: (rentalId) => {
+        return rentalId?.agent?.username
+      },
+    },
+    {
       title: translate('Date'),
       dataIndex: 'date',
       render: (date) => {

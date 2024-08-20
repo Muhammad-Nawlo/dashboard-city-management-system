@@ -56,9 +56,9 @@ const errorHandler = (error) => {
     const { status } = response;
 
     if (status === 401) {
-      window.localStorage.removeItem('auth');
-      window.localStorage.removeItem('isLogout');
-      window.location.href = '/login';
+      // window.localStorage.removeItem('auth');
+      // window.localStorage.removeItem('isLogout');
+      // window.location.href = '/login';
     }
     notification.config({
       duration: 20,

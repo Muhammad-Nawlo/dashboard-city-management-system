@@ -56,7 +56,7 @@ let routes = {
     },
     {
       path: '/',
-      element: <Dashboard />,
+      element: <User />,
     },
     {
       path: '/user',

@@ -56,12 +56,12 @@ function Sidebar({ collapsible, isMobile = false }) {
   const navigate = useNavigate();
 
   let items = [
-    {
-      key: 'dashboard',
-      icon: <DashboardOutlined />,
-      label: <Link to={'/'}>{translate('dashboard')}</Link>,
-      role: ['admin'],
-    },
+    // {
+    //   key: 'dashboard',
+    //   icon: <DashboardOutlined />,
+    //   label: <Link to={'/'}>{translate('dashboard')}</Link>,
+    //   role: ['admin'],
+    // },
     {
       key: 'user',
       icon: <UserOutlined />,
@@ -106,12 +106,12 @@ function Sidebar({ collapsible, isMobile = false }) {
       icon: <OrderedListOutlined />,
       role: ['restaurant-management'],
     },
-    {
-      key: 'agent',
-      label: <Link to={'/agent'}>{translate('agent')}</Link>,
-      icon: <UsergroupAddOutlined />,
-      role: ['admin'],
-    },
+    // {
+    //   key: 'agent',
+    //   label: <Link to={'/agent'}>{translate('agent')}</Link>,
+    //   icon: <UsergroupAddOutlined />,
+    //   role: ['admin'],
+    // },
     {
       key: 'property-type',
       label: <Link to={'/property-type'}>{translate('property type')}</Link>,

@@ -35,9 +35,16 @@ export default function Rental() {
   const dataTableColumns = [
     {
       title: translate('Agent'),
-      dataIndex: 'agentId',
+      dataIndex: 'agent',
       render: (agent) => {
-        return agent?.fullName;
+        return agent?.username;
+      },
+    },
+    {
+      title: translate('Buyer'),
+      dataIndex: 'buyer',
+      render: (buyer) => {
+        return buyer?.username;
       },
     },
     {

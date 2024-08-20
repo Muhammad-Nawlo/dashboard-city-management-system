@@ -9,10 +9,10 @@ export default function Agent() {
   const translate = useLanguage();
   const entity = 'real-estates/agents';
   const searchConfig = {
-    displayLabels: ['email', 'username','phoneNumber'],
+    displayLabels: ['email', 'username', 'phoneNumber'],
     searchFields: 'email,username,phoneNumber',
   };
-  const deleteModalLabels = ['email', 'username','phoneNumber'];
+  const deleteModalLabels = ['email', 'username', 'phoneNumber'];
 
   const Labels = {
     PANEL_TITLE: translate('agent'),
@@ -40,12 +40,20 @@ export default function Agent() {
       },
     },
     {
+      title: translate('Full Name'),
+      dataIndex: 'fullName',
+    },
+    {
       title: translate('Email'),
       dataIndex: 'email',
     },
     {
       title: translate('User Name'),
       dataIndex: 'username',
+    },
+    {
+      title: translate('Phone Number'),
+      dataIndex: 'phoneNumber',
     },
     {
       title: translate('Phone Number'),
